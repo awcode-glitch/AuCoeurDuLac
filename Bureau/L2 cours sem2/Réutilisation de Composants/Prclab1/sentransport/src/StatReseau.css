@@ -1,0 +1,25 @@
+.stat-reseau {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.stat-item {
+  background: #0a6e31;
+  color: white;
+  border-radius: 8px;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.stat-nombre {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.stat-label {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-top: 4px;
+}
