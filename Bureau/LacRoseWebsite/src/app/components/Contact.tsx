@@ -47,7 +47,7 @@ export function Contact() {
               <Mail className="w-7 h-7 text-white" />
             </div>
             <h3 className="font-semibold text-lg mb-2">{tr.contact.email}</h3>
-            <a href="mailto:contact@lacrose.sn" className="text-blue-300 hover:text-blue-200 transition-colors">contact@lacrose.sn</a>
+            <a href="mailto:aucoeurdulac5@gmail.com" className="text-blue-300 hover:text-blue-200 transition-colors">aucoeurdulac5@gmail.com</a>
           </div>
         </div>
 

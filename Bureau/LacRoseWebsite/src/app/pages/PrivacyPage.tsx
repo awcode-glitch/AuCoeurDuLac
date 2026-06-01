@@ -25,7 +25,7 @@ export function PrivacyPage() {
             <strong>Au Coeur du Lac</strong> est une entreprise de tourisme et d'activités de plein air située au Lac Rose (Lac Retba), Dakar, Sénégal.
             Nous proposons des balades en quad, pirogue, cheval et dromadaire.
             <br /><br />
-            Contact : <a href="mailto:maw106277@gmail.com" className="text-[#ff2d7a] hover:underline">maw106277@gmail.com</a> — Tél : <a href="tel:+221711358759" className="text-[#ff2d7a] hover:underline">+221 71 135 87 59</a>
+            Contact : <a href="mailto:aucoeurdulac5@gmail.com" className="text-[#ff2d7a] hover:underline">aucoeurdulac5@gmail.com</a> — Tél : <a href="tel:+221711358759" className="text-[#ff2d7a] hover:underline">+221 71 135 87 59</a>
           </p>
         </section>
 
@@ -70,7 +70,7 @@ export function PrivacyPage() {
             <li><strong>Droit d'opposition :</strong> vous opposer au traitement de vos données</li>
           </ul>
           <p className="text-gray-600 leading-relaxed mt-3">
-            Pour exercer ces droits, contactez-nous à : <a href="mailto:maw106277@gmail.com" className="text-[#ff2d7a] hover:underline">maw106277@gmail.com</a>
+            Pour exercer ces droits, contactez-nous à : <a href="mailto:aucoeurdulac5@gmail.com" className="text-[#ff2d7a] hover:underline">aucoeurdulac5@gmail.com</a>
           </p>
         </section>
 
