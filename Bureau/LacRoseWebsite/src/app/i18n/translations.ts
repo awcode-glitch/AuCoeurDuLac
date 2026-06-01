@@ -84,7 +84,7 @@ const t = {
       },
       {
         name: 'Pack Premium', subtitle: "L'expérience complète",
-        features: ['Transport Aller/Retour', 'Balade en Quad', 'Balade en Pirogue', 'Balade en Cheval ou Dromadaire (en option)', "Déjeuner à l'Hôtel (en option)", 'Détente en Piscine'],
+        features: ['Balade en Quad — 1h', 'Balade en Pirogue — 30mn', 'Balade à Cheval ou Dromadaire — 20mn', 'Transport Aller/Retour (en option)', "Déjeuner à l'Hôtel (en option)", 'Détente en Piscine (en option)'],
       },
     ],
   },
@@ -165,7 +165,7 @@ const t = {
       },
       {
         name: 'Premium Package', subtitle: 'The Complete Experience',
-        features: ['Round-trip Transport', 'Quad Ride', 'Pirogue Ride', 'Horse or Camel Ride (optional)', 'Hotel Lunch (optional)', 'Pool Relaxation'],
+        features: ['Quad Ride — 1h', 'Pirogue Ride — 30min', 'Horse or Camel Ride — 20min', 'Round-trip Transport (optional)', 'Hotel Lunch (optional)', 'Pool Relaxation (optional)'],
       },
     ],
   },
@@ -246,7 +246,7 @@ const t = {
       },
       {
         name: 'الباقة المميزة', subtitle: 'التجربة الكاملة',
-        features: ['نقل ذهاب وإياب', 'جولة دراجة رباعية', 'جولة قارب', 'جولة خيل أو جمل (اختياري)', 'غداء في الفندق (اختياري)', 'الاسترخاء في المسبح'],
+        features: ['جولة دراجة رباعية — 1 ساعة', 'جولة قارب — 30 دقيقة', 'جولة خيل أو جمل — 20 دقيقة', 'نقل ذهاب وإياب (اختياري)', 'غداء في الفندق (اختياري)', 'الاسترخاء في المسبح (اختياري)'],
       },
     ],
   },
@@ -327,7 +327,7 @@ const t = {
       },
       {
         name: '高级套餐', subtitle: '完整体验',
-        features: ['往返交通', '越野车骑行', '独木舟骑行', '骑马或骆驼（可选）', '酒店午餐（可选）', '泳池休闲'],
+        features: ['越野车骑行 — 1小时', '独木舟骑行 — 30分钟', '骑马或骆驼 — 20分钟', '往返交通（可选）', '酒店午餐（可选）', '泳池休闲（可选）'],
       },
     ],
   },
