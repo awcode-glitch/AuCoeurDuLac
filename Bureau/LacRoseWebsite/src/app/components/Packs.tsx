@@ -9,7 +9,7 @@ import img5 from '../../imports/image-5.png';
 
 const packsStatic = [
   { id: 0, image: img3, overlayColor: 'from-gray-900/60 to-gray-700/30', price: '19,500', originalPrice: '20,000', highlight: false, color: 'border-gray-200', buttonColor: 'bg-gray-900 hover:bg-gray-800' },
-  { id: 1, image: img4, overlayColor: 'from-[#ff2d7a]/70 to-pink-400/30', price: '24,500', highlight: true,  color: 'border-[#ff2d7a] ring-4 ring-pink-100',   buttonColor: 'bg-gradient-to-r from-[#ff2d7a] to-pink-600 hover:shadow-xl', badge: true },
+  { id: 1, image: img4, overlayColor: 'from-[#ff2d7a]/70 to-pink-400/30', price: '23,500', originalPrice: '24,500', highlight: true, color: 'border-[#ff2d7a] ring-4 ring-pink-100', buttonColor: 'bg-gradient-to-r from-[#ff2d7a] to-pink-600 hover:shadow-xl', badge: true },
   { id: 2, image: img5, overlayColor: 'from-[#f97316]/70 to-orange-400/30',price: '25,000', highlight: false, color: 'border-[#f97316] ring-2 ring-orange-100', buttonColor: 'bg-gradient-to-r from-[#f97316] to-orange-600 hover:shadow-xl' },
 ];
 

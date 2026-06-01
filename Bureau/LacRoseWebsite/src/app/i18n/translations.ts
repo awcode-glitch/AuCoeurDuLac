@@ -80,7 +80,7 @@ const t = {
       },
       {
         name: 'Pack Découverte', subtitle: "L'essentiel du Lac Rose",
-        features: ['Transport Aller/Retour', 'Balade en Quad', 'Balade en Pirogue', "Déjeuner à l'Hôtel", 'Détente en Piscine'],
+        features: ['Balade en Quad — 1h', 'Balade en Pirogue — 30mn', 'Balade à Cheval ou Dromadaire — 20mn', "Déjeuner à l'Hôtel", 'Détente en Piscine (en option)'],
       },
       {
         name: 'Pack Premium', subtitle: "L'expérience complète",
@@ -161,7 +161,7 @@ const t = {
       },
       {
         name: 'Discovery Package', subtitle: 'The Essentials of Pink Lake',
-        features: ['Round-trip Transport', 'Quad Ride', 'Pirogue Ride', 'Hotel Lunch', 'Pool Relaxation'],
+        features: ['Quad Ride — 1h', 'Pirogue Ride — 30min', 'Horse or Camel Ride — 20min', 'Hotel Lunch', 'Pool Relaxation (optional)'],
       },
       {
         name: 'Premium Package', subtitle: 'The Complete Experience',
@@ -242,7 +242,7 @@ const t = {
       },
       {
         name: 'باقة الاكتشاف', subtitle: 'أساسيات البحيرة الوردية',
-        features: ['نقل ذهاب وإياب', 'جولة دراجة رباعية', 'جولة قارب', 'غداء في الفندق', 'الاسترخاء في المسبح'],
+        features: ['جولة دراجة رباعية — 1 ساعة', 'جولة قارب — 30 دقيقة', 'جولة خيل أو جمل — 20 دقيقة', 'غداء في الفندق', 'الاسترخاء في المسبح (اختياري)'],
       },
       {
         name: 'الباقة المميزة', subtitle: 'التجربة الكاملة',
@@ -323,7 +323,7 @@ const t = {
       },
       {
         name: '探索套餐', subtitle: '粉红湖精华',
-        features: ['往返交通', '越野车骑行', '独木舟骑行', '酒店午餐', '泳池休闲'],
+        features: ['越野车骑行 — 1小时', '独木舟骑行 — 30分钟', '骑马或骆驼 — 20分钟', '酒店午餐', '泳池休闲（可选）'],
       },
       {
         name: '高级套餐', subtitle: '完整体验',
