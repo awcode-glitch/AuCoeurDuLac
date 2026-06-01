@@ -30,10 +30,27 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">{tr.footer.experiences}</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#galerie" className="hover:text-[#ff2d7a] transition-colors">Quad</a></li>
-              <li><a href="#galerie" className="hover:text-[#ff2d7a] transition-colors">{tr.gallery.cheval}</a></li>
-              <li><a href="#galerie" className="hover:text-[#ff2d7a] transition-colors">{tr.gallery.dromadaire}</a></li>
-              <li><a href="#galerie" className="hover:text-[#ff2d7a] transition-colors">{tr.gallery.pirogue}</a></li>
+              {[
+                { label: 'Quad', cat: 'quad' },
+                { label: tr.gallery.cheval, cat: 'cheval' },
+                { label: tr.gallery.dromadaire, cat: 'dromadaire' },
+                { label: tr.gallery.pirogue, cat: 'pirogue' },
+              ].map(({ label, cat }) => (
+                <li key={cat}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      window.history.pushState({}, '', `?cat=${cat}`);
+                      const el = document.getElementById('galerie');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      window.dispatchEvent(new Event('popstate'));
+                    }}
+                    className="hover:text-[#ff2d7a] transition-colors text-left text-gray-400"
+                  >
+                    {label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 

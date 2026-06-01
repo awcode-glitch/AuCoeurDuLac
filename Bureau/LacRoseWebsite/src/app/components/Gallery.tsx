@@ -1,4 +1,4 @@
-import { memo, useState } from 'react';
+import { memo, useState, useEffect } from 'react';
 import img3 from '../../imports/image-3.png';
 import img4 from '../../imports/image-4.png';
 import img5 from '../../imports/image-5.png';
@@ -32,6 +32,16 @@ const images = [
 function GalleryComponent() {
   const { tr } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  useEffect(() => {
+    const onHashChange = () => {
+      const cat = new URLSearchParams(window.location.search).get('cat');
+      if (cat) setSelectedCategory(cat);
+    };
+    onHashChange();
+    window.addEventListener('popstate', onHashChange);
+    return () => window.removeEventListener('popstate', onHashChange);
+  }, []);
 
   const categories = [
     { id: 'all',       name: tr.gallery.all },
