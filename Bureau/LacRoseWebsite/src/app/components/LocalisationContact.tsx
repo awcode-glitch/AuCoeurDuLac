@@ -116,7 +116,7 @@ export function LocalisationContact() {
 
           <div className="flex flex-col gap-3">
             <a
-              href="https://www.google.com/maps/search/Lac+Rose+Dakar+Sénégal"
+              href="https://www.google.com/maps/place/14%C2%B050'01.3%22N+17%C2%B014'54.9%22W/@14.8336926,-17.2485886,17z"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-3 px-6 bg-white border-2 border-[#ff2d7a] text-[#ff2d7a] font-semibold rounded-full hover:bg-pink-50 transition-all shadow-sm"
@@ -129,7 +129,7 @@ export function LocalisationContact() {
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-pink-100 h-full min-h-[500px]">
             <iframe
               title="Carte Lac Rose Dakar"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7719.006946690718!2d-17.2432!3d14.8335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10e91aa5555555%3A0x1234567890abcdef!2sLac%20Rose%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2ssn!4v1680000000000!5m2!1sfr!2ssn"
+              src="https://maps.google.com/maps?q=14.8336926,-17.2485886&z=17&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '500px' }}
