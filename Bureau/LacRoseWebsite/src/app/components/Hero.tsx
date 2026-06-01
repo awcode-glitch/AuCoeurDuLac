@@ -49,12 +49,6 @@ export function Hero() {
               {tr.hero.bookNow}
               <ArrowRight className="w-5 h-5" />
             </a>
-            <a
-              href="#experiences"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all shadow-lg hover:shadow-xl border border-white/40"
-            >
-              {tr.hero.discover}
-            </a>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 max-w-4xl mx-auto">
