@@ -45,17 +45,6 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">{tr.footer.newsletter}</h4>
-            <p className="text-gray-400 mb-4">{tr.footer.newsletterDesc}</p>
-            <div className="flex gap-2">
-              <input type="email" placeholder={tr.footer.emailPlaceholder} aria-label={tr.footer.emailPlaceholder}
-                className="flex-1 px-4 py-2 rounded-full bg-white/10 border border-white/20 focus:outline-none focus:border-[#ff2d7a] text-white placeholder-gray-500" />
-              <button type="button" className="px-6 py-2 bg-gradient-to-r from-[#ff2d7a] to-pink-600 rounded-full hover:shadow-lg transition-all">
-                OK
-              </button>
-            </div>
-          </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
