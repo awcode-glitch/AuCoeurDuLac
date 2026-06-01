@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY ?? '';
+const RATE_LIMIT_MS = 60 * 1000; // 1 minute entre chaque envoi
 
 export function LocalisationContact() {
   const { tr } = useLanguage();
   const [form, setForm] = useState({ nom: '', email: '', telephone: '', sujet: '', message: '' });
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error' | 'ratelimit'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -14,6 +15,13 @@ export function LocalisationContact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const lastSent = parseInt(localStorage.getItem('lac_last_contact') ?? '0');
+    if (Date.now() - lastSent < RATE_LIMIT_MS) {
+      setStatus('ratelimit');
+      return;
+    }
+
     setStatus('sending');
 
     try {
@@ -33,6 +41,7 @@ export function LocalisationContact() {
       const data = await res.json();
       if (data.success) {
         setStatus('success');
+        localStorage.setItem('lac_last_contact', Date.now().toString());
         setForm({ nom: '', email: '', telephone: '', sujet: '', message: '' });
       } else {
         setStatus('error');
@@ -99,6 +108,9 @@ export function LocalisationContact() {
             )}
             {status === 'error' && (
               <div className="text-red-500 font-semibold text-center">❌ Erreur lors de l'envoi. Réessayez.</div>
+            )}
+            {status === 'ratelimit' && (
+              <div className="text-orange-500 font-semibold text-center">⏳ Veuillez attendre 1 minute avant de renvoyer un message.</div>
             )}
           </form>
 
