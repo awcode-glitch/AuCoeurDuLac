@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Check } from 'lucide-react';
-import { BookingModal, BookingData } from './BookingModal';
-import { PaymentModal } from './PaymentModal';
+import { BookingModal } from './BookingModal';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useLanguage } from '../context/LanguageContext';
 import img3 from '../../imports/image-3.png';
@@ -18,25 +17,11 @@ export function Packs() {
   const { tr } = useLanguage();
   const packs = packsStatic.map((s, i) => ({ ...s, ...tr.packsData[i] }));
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
-  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
   const [selectedPack, setSelectedPack] = useState<{ name: string; price: string } | null>(null);
-  const [bookingData, setBookingData] = useState<BookingData | null>(null);
 
   const handleBookNow = (packName: string, packPrice: string) => {
     setSelectedPack({ name: packName, price: packPrice });
     setIsBookingModalOpen(true);
-  };
-
-  const handleProceedToPayment = (data: BookingData) => {
-    setBookingData(data);
-    setIsBookingModalOpen(false);
-    setIsPaymentModalOpen(true);
-  };
-
-  const handlePaymentSuccess = () => {
-    setIsPaymentModalOpen(false);
-    setBookingData(null);
-    setSelectedPack(null);
   };
 
   return (
@@ -136,19 +121,11 @@ export function Packs() {
         {selectedPack && (
           <BookingModal
             isOpen={isBookingModalOpen}
-            onClose={() => setIsBookingModalOpen(false)}
+            onClose={() => { setIsBookingModalOpen(false); setSelectedPack(null); }}
             packName={selectedPack.name}
             packPrice={selectedPack.price}
-            onProceedToPayment={handleProceedToPayment}
           />
         )}
-
-        <PaymentModal
-          isOpen={isPaymentModalOpen}
-          onClose={() => setIsPaymentModalOpen(false)}
-          bookingData={bookingData}
-          onPaymentSuccess={handlePaymentSuccess}
-        />
       </div>
     </section>
   );
