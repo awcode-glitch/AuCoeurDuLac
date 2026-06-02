@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useLanguage } from '../context/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import logo from '../../imports/logo.jpeg';
 
 function scrollToSection(id: string) {
   const el = document.getElementById(id);
@@ -22,8 +23,9 @@ export function Navbar({ onOpenReservation }: NavbarProps) {
     <nav aria-label="Navigation principale" className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center gap-2">
-            <div className="text-3xl font-bold">
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Au Coeur du Lac" className="h-12 w-12 rounded-full object-cover shadow-md" />
+            <div className="text-2xl font-bold">
               <span className="text-[#ff2d7a]">Au Coeur du Lac</span>
             </div>
           </div>
@@ -43,7 +45,7 @@ export function Navbar({ onOpenReservation }: NavbarProps) {
               <li role="none">
                 <button
                   type="button"
-                  onClick={() => scrollToSection('galerie')}
+                  onClick={() => navigate('/galerie')}
                   className="bg-transparent text-gray-700 hover:text-[#ff2d7a] transition-colors px-4 py-2 rounded-full"
                   style={{ outline: 'none', border: 'none' }}
                 >
@@ -114,7 +116,7 @@ export function Navbar({ onOpenReservation }: NavbarProps) {
               {tr.nav.reserver}
             </button>
             <a
-              href="#galerie"
+              href="/galerie"
               className="block px-4 py-2 text-gray-700 hover:bg-pink-50 hover:text-[#ff2d7a] rounded-lg transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
