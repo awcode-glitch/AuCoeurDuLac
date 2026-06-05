@@ -1,0 +1,39 @@
+# Dépendances
+node_modules/
+api/venv/
+
+# Environnement (NE JAMAIS COMMITTER)
+.env
+.env.local
+.env.production
+api/.env
+
+# Build
+dist/
+build/
+
+# Base de données locale
+api/instance/
+
+# Images uploadées localement (stockées sur Cloudinary en prod)
+api/uploads/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Logs
+*.log
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
